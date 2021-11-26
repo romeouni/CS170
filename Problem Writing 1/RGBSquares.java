@@ -1,0 +1,214 @@
+public class RGBSquares{
+
+  public static void square(Turtle t, double length){
+    for(int i = 0; i < 4; i++){
+      t.forward(length);
+      t.left(90);
+    }
+  }
+
+  public static void newColor(Turtle t, String color){
+    t.penup();
+    t.forward(140);
+    t.pendown();
+    t.color(color);
+
+  }
+
+  public static void squareLine(Turtle t, double length){
+      square(t, length);
+      newColor(t, "green");
+      square(t, length);
+      newColor(t, "blue");
+      square(t, length);
+  }
+
+  public static void main(String[] args){
+    Turtle mikey = new Turtle();
+    mikey.color("red");
+    squareLine(mikey, 100);
+    mikey.hideturtle();
+  }
+}
+
+
+/*
+<question>
+<title>RGB Squares</title>
+<type>JavaCode</type>
+<points>2</points>
+<text>
+Write a program to draw three separate squares arranged horizontally, with the first one being red, the second green and the third blue. At the end, make the turtle invisible. An example is shown with a side length of 100 and 40 unit gap between each square.
+</text>
+<figure>
+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
+vEXdM3g5AAAAAElFTkSuQmCC
+
+
+</figure>
+<init>
+public class RGBSquares{
+    //write your code here
+
+    public static void main(String[] args){
+        //test your code here
+    }
+}
+</init>
+<answer>
+public class RGBSquares{
+
+  public static void square(Turtle t, double length){
+    for(int i = 0; i < 4; i++){
+      t.forward(length);
+      t.left(90);
+    }
+  }
+
+  public static void newColor(Turtle t, String color){
+    t.penup();
+    t.forward(140);
+    t.pendown();
+    t.color(color);
+
+  }
+
+  public static void squareLine(Turtle t, double length){
+      square(t, length);
+      newColor(t, "green");
+      square(t, length);
+      newColor(t, "blue");
+      square(t, length);
+  }
+
+  public static void main(String[] args){
+    Turtle mikey = new Turtle();
+    mikey.color("red");
+    squareLine(mikey, 100);
+    mikey.hideturtle();
+  }
+}
+</answer>
+</question>
+*/
